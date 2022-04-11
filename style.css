@@ -29,3 +29,12 @@ tr{
 .data {
 	width: 160px;
 }
+
+.table_wrapper{
+	overflow-x: scroll;
+}
+
+.table{
+	width: 900px;
+	white-space: nowrap;
+}
