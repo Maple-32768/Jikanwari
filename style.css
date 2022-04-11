@@ -1,0 +1,31 @@
+table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+}
+td, th {
+	padding: 3px;
+	height: 25px;
+	text-align: center;
+}
+tr.head {
+	background: #70ad47;
+    height: 30px;
+}
+
+tr{
+    height: 50px;
+}
+
+.even {
+	background: #ffffff;
+}
+.odd {
+	background: #e2efda;
+}
+
+.left{
+    width: 100px;
+}
+.data {
+	width: 160px;
+}
