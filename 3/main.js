@@ -14,14 +14,17 @@ const END_CLASS_TIMES = [
 
 window.onload = function(){
     var table = document.getElementById("main_table");
-    var cell_index = Math.max(1, date.getDay()), highlight_row = 1, first = true;
+    var cell_index =  Math.max(1, date.getDay()), highlight_row = 1, first = true;
+    var now_hour = date.getHours(), now_minute = date.getMinutes();
+    
     for(var i = table.rows.length - 1; i > 0; i--){
-        if(table.rows[i].cells[cell_index].innerText != ""){
+    	var cell = table.rows[i].cells[cell_index];
+        if(cell != null && cell.innerText != ""){
             var time = END_CLASS_TIMES[i - 1];
-            if(date.getHours() > time[0] || (date.getHours() == time[0] && date.getMinutes() > time[1])){
+            if(now_hour > time[0] || (now_hour == time[0] && now_minute > time[1])){
                 if(first) {
                     highlight_row = 1;
-                    cell_index++;
+                    cell_index = Math.max(1, (cell_index + 1) % 7);
                 }
                 break;
             }
