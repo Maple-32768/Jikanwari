@@ -33,15 +33,16 @@ window.onload = function(){
         }
     }
     table.rows[highlight_row].cells[cell_index].dataset.highlight_cell="true";
+    if(cell_index == 6 && table.rows[i].cells[7] != null) table.rows[highlight_row].cells[7].dataset.highlight_cell="true";
     for(var i = 0; i < table.rows.length; i++){
         var cell = table.rows[i].cells[cell_index];
         if(cell != null){
             cell.dataset.highlight_line = "true";
             cell.innerHTML = "<span>" + cell.innerText + "</span>"
         }
-        if(cell_index == 6 && table.rows[i].cells[cell_index + 1] != null){
-            table.rows[i].cells[cell_index + 1].dataset.highlight_line = "true"
-            table.rows[i].cells[cell_index + 1].innerHTML = "<span>" + cell.innerText + "</span>"
+        if(cell_index == 6 && table.rows[i].cells[7] != null){
+            table.rows[i].cells[7].dataset.highlight_line = "true"
+            table.rows[i].cells[7].innerHTML = "<span>" + cell.innerText + "</span>"
         }
     }
 }
