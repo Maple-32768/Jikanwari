@@ -40,9 +40,9 @@ window.onload = function(){
             cell.dataset.highlight_line = "true";
             cell.innerHTML = "<span>" + cell.innerText + "</span>"
         }
-        if(cell_index == 6 && table.rows[i].cells[7] != null){
-            table.rows[i].cells[7].dataset.highlight_line = "true"
-            table.rows[i].cells[7].innerHTML = "<span>" + cell.innerText + "</span>"
+        if(cell_index == 6 && (cell = table.rows[i].cells[7]) != null){
+            cell.dataset.highlight_line = "true"
+            cell.innerHTML = "<span>" + cell.innerText + "</span>"
         }
     }
 }
