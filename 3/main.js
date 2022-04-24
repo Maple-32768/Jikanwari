@@ -14,22 +14,24 @@ const END_CLASS_TIMES = [
 
 window.onload = function(){
     var table = document.getElementById("main_table");
-    var cell_index =  Math.max(1, date.getDay()), highlight_row = 1, first = true;
-    var now_hour = date.getHours(), now_minute = date.getMinutes();
-    
-    for(var i = table.rows.length - 1; i > 0; i--){
-    	var cell = table.rows[i].cells[cell_index];
-        if(cell != null && cell.innerText != ""){
-            var time = END_CLASS_TIMES[i - 1];
-            if(now_hour > time[0] || (now_hour == time[0] && now_minute > time[1])){
-                if(first) {
-                    highlight_row = 1;
-                    cell_index = Math.max(1, (cell_index + 1) % 7);
+    var now_dayOfWeek = 6, cell_index =  now_dayOfWeek, highlight_row = 1, first = true;
+    var now_hour = 18, now_minute = date.getMinutes();
+    if(now_dayOfWeek == 0) cell_index = 1;
+    else{
+        for(var i = table.rows.length - 1; i > 0; i--){
+            var cell = table.rows[i].cells[cell_index];
+            if(cell != null && cell.innerText != ""){
+                var time = END_CLASS_TIMES[i - 1];
+                if(now_hour > time[0] || (now_hour == time[0] && now_minute > time[1])){
+                    if(first) {
+                        highlight_row = 1;
+                        cell_index = Math.max(1, (cell_index + 1) % 7);
+                    }
+                    break;
                 }
-                break;
+                highlight_row = i;
+                first = false;
             }
-            highlight_row = i;
-            first = false;
         }
     }
     table.rows[highlight_row].cells[cell_index].dataset.highlight_cell="true";
