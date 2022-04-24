@@ -14,8 +14,8 @@ const END_CLASS_TIMES = [
 
 window.onload = function(){
     var table = document.getElementById("main_table");
-    var now_dayOfWeek = 6, cell_index =  now_dayOfWeek, highlight_row = 1, first = true;
-    var now_hour = 18, now_minute = date.getMinutes();
+    var now_dayOfWeek = date.getDate(), cell_index =  now_dayOfWeek, highlight_row = 1, first = true;
+    var now_hour = date.getHours(), now_minute = date.getMinutes();
     if(now_dayOfWeek == 0) cell_index = 1;
     else{
         for(var i = table.rows.length - 1; i > 0; i--){
