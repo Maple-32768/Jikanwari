@@ -1,9 +1,9 @@
 .class-wrapper{
 	background-color: white;
-	float: left;
 	height: 250px;
 	width: 300px;
 	margin: 10px;
+	display: inline-block;
 }
 
 .class-wrapper h3{
