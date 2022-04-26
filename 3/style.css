@@ -1,0 +1,75 @@
+h3{
+	text-align: center;
+	margin: 0px;
+	padding: 10px;
+}
+
+.main{
+	height: auto;
+	background-color: #fffff6;
+}
+
+table{
+	margin: auto;
+	background-color: white;
+}
+
+table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+}
+td, th {
+	padding: 3px;
+	height: 25px;
+	text-align: center;
+}
+
+td:empty{
+	background-color: #dfdfdf;
+}
+
+tr.head {
+	background: #70ad47;
+    height: 30px;
+}
+
+tr{
+    height: 50px;
+}
+
+.even {
+	background: #ffffff;
+}
+.odd {
+	background: #e2efda;
+}
+
+tr > td.left{
+    width: 70px;
+}
+tr > td{
+	width: 160px;
+}
+
+tr > td[data-highlight_line="true"] > span{
+	font-weight: bold;
+}
+
+tr > td[data-highlight_cell="true"] > span{
+	border-bottom: 2px solid #595959;
+}
+
+.table_wrapper{
+	overflow-x: scroll;
+	margin: 2px;
+}
+
+.table{
+	white-space: nowrap;
+	width: max-content;
+}
+
+p.align_right{
+	text-align: right;
+	margin-right: 10px;
+}

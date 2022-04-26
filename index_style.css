@@ -1,0 +1,20 @@
+.class-wrapper{
+	background-color: white;
+	float: left;
+	height: 250px;
+	width: 300px;
+	margin: 10px;
+}
+
+.class-wrapper h3{
+	margin: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+	color: white;
+	font-size: 24px;
+}
+.class-wrapper p{
+	padding:10px;
+	color: white;
+	font-size: 18px;
+}
